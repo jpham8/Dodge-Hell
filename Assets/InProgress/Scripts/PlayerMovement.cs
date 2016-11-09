@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
+		Debug.Log ("Horizontal: " + Input.GetAxis (horizontalAxis));
+		Debug.Log ("Vertical: " + Input.GetAxisRaw (verticalAxis));
+
 		
 		if (Input.GetAxis(horizontalAxis) > 0) {
 			playerTransform.Translate (speed * Vector3.right * Time.deltaTime);
